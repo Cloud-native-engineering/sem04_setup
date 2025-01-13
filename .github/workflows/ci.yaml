@@ -43,7 +43,7 @@ jobs:
             --system-extension-image ${{ env.EXTENSION02 }}
 
       - name: Upload Talos image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: talos-image
           path: ${{ github.workspace }}/_out/installer-arm64.tar
@@ -63,7 +63,7 @@ jobs:
         uses: iarekylew00t/crane-installer@v3
 
       - name: Download Talos image
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: talos-image
           path: ${{ github.workspace }}/_out
